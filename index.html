@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bố cục HTML với hình ảnh</title>
+    <style>
+      .loiHuaContainer {
+        /* cách trái phải 20% */
+        padding: 0 20%;
+      }
+      .footer_content {
+        font-size: 20px;
+        font-weight: bold;
+        color: black;
+        width: 50%;
+        /* cách trái 20px */
+        margin-left: 60px;
+      }
+      .custom-list {
+        counter-reset: my-counter; /* Thiết lập biến đếm tùy chỉnh */
+        list-style: none; /* Loại bỏ chữ số đánh số mặc định của danh sách */
+      }
+
+      .lh-right {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .lh-right-top {
+        height: 30%;
+        border-bottom: 1px solid #bdacac; /* Màu và độ dày của đường kẻ */
+        font-size: 1.7rem;
+        font-weight: bold;
+      }
+
+      .lh-right-bottom {
+        height: 80%;
+      }
+
+      .lh-grid-container {
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 100%;
+        height: auto;
+        padding-bottom: 2rem;
+      }
+
+      .lh-left {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        font-size: 5rem;
+        font-weight: bold;
+      }
+
+      .lh-left::before {
+        content: counter(
+          my-counter
+        ); /* Display the value of the "my-counter" counter */
+        counter-increment: my-counter; /* Increment the "my-counter" counter */
+      }
+      .lhimg_content {
+        /* float: right; width: 50% */
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        /* dưới 20px */
+        padding-top: 10%;
+      }
+
+      .positioned {
+        position: absolute;
+      }
+
+      .pink {
+        background: rgb(239, 71, 111);
+        left: 1240px;
+        top: 300px;
+      }
+
+      .blue {
+        z-index: 2;
+        background: rgb(17, 138, 178);
+      }
+      .blue,
+      .green,
+      .pink {
+        height: 150px;
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loiHuaContainer">
+      <h1>Lời hứa CKD</h1>
+      <h3>
+        Lời hứa CKD kinh doanh của chúng tôi là mang đến sự tin tương cho khách
+        hàng về chất lượng sản phẩm và dịch vụ.
+      </h3>
+      <div>
+        <div>
+          <div style="float: left; width: 50%">
+            <ol class="custom-list">
+              <li class="lh-grid-container">
+                <div class="lh-left"></div>
+                <div class="lh-right">
+                  <div class="lh-right-top">Chất lượng và an toàn</div>
+                  <div class="lh-right-bottom">
+                    Chúng tôi cam kết thực hiện lời hứa này trong mọi khía cạnh
+                    của hoạt đọng kinh doanh của mình Chúng tôi cam kết thực
+                    hiện lời hứa này trong mọi khía cạnh của hoạt đọng kinh
+                    doanh của mình Chúng tôi cam kết thực hiện lời hứa này trong
+                    mọi khía cạnh của hoạt đọng kinh doanh của mình
+                  </div>
+                </div>
+              </li>
+              <li class="lh-grid-container">
+                <div class="lh-left"></div>
+                <div class="lh-right">
+                  <div class="lh-right-top">
+                    Sáng tạo và nghiên cứu liên tục
+                  </div>
+                  <div class="lh-right-bottom"></div>
+                </div>
+              </li>
+              <li class="lh-grid-container">
+                <div class="lh-left"></div>
+                <div class="lh-right">
+                  <div class="lh-right-top">Đa dạng sản phẩm</div>
+                  <div class="lh-right-bottom">
+                    Chúng tôi cam kết thực hiện lời hứa này trong mọi khía cạnh
+                    của hoạt đọng kinh doanh của mình Chúng tôi cam kết thực
+                    hiện lời hứa này trong mọi khía cạnh của hoạt đọng kinh
+                    doanh của mình Chúng tôi cam kết thực hiện lời hứa này trong
+                    mọi khía cạnh của hoạt đọng kinh doanh của mình
+                  </div>
+                </div>
+              </li>
+              <li class="lh-grid-container">
+                <div class="lh-left"></div>
+                <div class="lh-right">
+                  <div class="lh-right-top">
+                    Bền vững và tôn trọng môi trường
+                  </div>
+                  <div class="lh-right-bottom">
+                    Chúng tôi cam kết thực hiện lời hứa này trong mọi khía cạnh
+                    của hoạt đọng kinh doanh của mình Chúng tôi cam kết thực
+                    hiện lời hứa này trong mọi khía cạnh của hoạt đọng kinh
+                    doanh của mình Chúng tôi cam kết thực hiện lời hứa này trong
+                    mọi khía cạnh của hoạt đọng kinh doanh của mình
+                  </div>
+                </div>
+              </li>
+              <li class="lh-grid-container">
+                <div class="lh-left"></div>
+                <div class="lh-right">
+                  <div class="lh-right-top">Dịch vụ khách hàng tận tâm</div>
+                  <div class="lh-right-bottom">
+                    Chúng tôi cam kết thực hiện lời hứa này trong mọi khía cạnh
+                    của hoạt đọng kinh doanh của mình Chúng tôi cam kết thực
+                    hiện lời hứa này trong mọi khía cạnh của hoạt đọng kinh
+                    doanh của mình Chúng tôi cam kết thực hiện lời hứa này trong
+                    mọi khía cạnh của hoạt đọng kinh doanh của mình
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+          <div class="lhimg_container">
+            <div class="lhimg_content">
+              <div class="pink positioned">
+                <img src="https://picsum.photos/200/300" alt="" />
+              </div>
+              <div class="blue positioned">
+                <img src="https://picsum.photos/200/300" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div style="clear: both"></div>
+          <div class="footer_content">
+            Chúng tôi cam kết thực hiện lời hứa này trong mọi khía cạnh của hoạt
+            đọng kinh doanh của mình
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 100%;
+        height: 300px;
+      }
+
+      .left {
+        background-color: #e0e0e0;
+        display: flex;
+        align-items: flex-start; /* Đặt nội dung ở trên biên giới */
+        justify-content: center; /* Đặt nội dung ở giữa biên giới */
+      }
+
+      .right {
+        background-color: #f0f0f0;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .right-top {
+        background-color: #ccc;
+        height: 20%;
+        border-bottom: 1px solid #000; /* Màu và độ dày của đường kẻ */
+      }
+
+      .right-bottom {
+        background-color: #ddd;
+        height: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="left">Nội dung của "left"</div>
+      <div class="right">
+        <div class="right-top">Phần trên bên phải (20%)</div>
+        <div class="right-bottom">Phần dưới bên phải (80%)</div>
+      </div>
+    </div>
+  </body>
+</html>
