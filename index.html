@@ -1,188 +1,113 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bố cục HTML với hình ảnh</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
     <style>
-      .loiHuaContainer {
-        /* cách trái phải 20% */
-        padding: 0 20%;
+    .left-section2 {
+      display: none;
+    }
+    .top_title_gt{
+      /* màu chữ #3D5C16 */
+      color: #3D5C16;
+    }
+    .content_gt{
+      /* can deu noi dung */
+      text-align: justify;
+    }
+     @media screen and (min-width: 500px) and (max-width: 1024px) {
+      .left-section1 {
+        display: none;
       }
-      .footer_content {
-        font-size: 20px;
-        font-weight: bold;
-        color: black;
-        width: 50%;
-        /* cách trái 20px */
-        margin-left: 60px;
-      }
-      .custom-list {
-        counter-reset: my-counter; /* Thiết lập biến đếm tùy chỉnh */
-        list-style: none; /* Loại bỏ chữ số đánh số mặc định của danh sách */
-      }
+      .left-section2 {
+      display: block;
+    }
+    .top-subsection{
+      font-size: 10px;
+    }
+    .top_title_gt{
+      font-size: 24px;
+    }
+    .bot_title_gt{
+      font-size: 18px;
+    }
+    }
+    /* responsive man hinh dien thoai */
+    @media screen and (max-width: 500px) {
+   .left-section2 {
+    display: none;
+  }
+  .top-subsection{
+      font-size: 7px;
+    }
+    .top_title_gt{
+      font-size: 14px;
+    }
+    .bot_title_gt{
+      font-size: 10px;
+    }
+    .bottom-subsection{
+      /* nam goc trai */
+      width: 30%;
+      text-align: left;
+    }
+}
 
-      .lh-right {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .lh-right-top {
-        height: 30%;
-        border-bottom: 1px solid #bdacac; /* Màu và độ dày của đường kẻ */
-        font-size: 1.7rem;
-        font-weight: bold;
-      }
-
-      .lh-right-bottom {
-        height: 80%;
-      }
-
-      .lh-grid-container {
-        display: grid;
-        grid-template-columns: 20% 80%;
-        grid-template-rows: 100%;
-        height: auto;
-        padding-bottom: 2rem;
-      }
-
-      .lh-left {
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        font-size: 5rem;
-        font-weight: bold;
-      }
-
-      .lh-left::before {
-        content: counter(
-          my-counter
-        ); /* Display the value of the "my-counter" counter */
-        counter-increment: my-counter; /* Increment the "my-counter" counter */
-      }
-      .lhimg_content {
-        /* float: right; width: 50% */
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        /* dưới 20px */
-        padding-top: 10%;
-      }
-
-      .positioned {
-        position: absolute;
-      }
-
-      .pink {
-        background: rgb(239, 71, 111);
-        left: 1240px;
-        top: 300px;
-      }
-
-      .blue {
-        z-index: 2;
-        background: rgb(17, 138, 178);
-      }
-      .blue,
-      .green,
-      .pink {
-        height: 150px;
-        width: 150px;
-      }
     </style>
+    <!-- tôi muốn responsive -->
   </head>
   <body>
-    <div class="loiHuaContainer">
-      <h1>Lời hứa CKD</h1>
-      <h3>
-        Lời hứa CKD kinh doanh của chúng tôi là mang đến sự tin tương cho khách
-        hàng về chất lượng sản phẩm và dịch vụ.
-      </h3>
-      <div>
-        <div>
-          <div style="float: left; width: 50%">
-            <ol class="custom-list">
-              <li class="lh-grid-container">
-                <div class="lh-left"></div>
-                <div class="lh-right">
-                  <div class="lh-right-top">Chất lượng và an toàn</div>
-                  <div class="lh-right-bottom">
-                    Chúng tôi cam kết thực hiện lời hứa này trong mọi khía cạnh
-                    của hoạt đọng kinh doanh của mình Chúng tôi cam kết thực
-                    hiện lời hứa này trong mọi khía cạnh của hoạt đọng kinh
-                    doanh của mình Chúng tôi cam kết thực hiện lời hứa này trong
-                    mọi khía cạnh của hoạt đọng kinh doanh của mình
-                  </div>
-                </div>
-              </li>
-              <li class="lh-grid-container">
-                <div class="lh-left"></div>
-                <div class="lh-right">
-                  <div class="lh-right-top">
-                    Sáng tạo và nghiên cứu liên tục
-                  </div>
-                  <div class="lh-right-bottom"></div>
-                </div>
-              </li>
-              <li class="lh-grid-container">
-                <div class="lh-left"></div>
-                <div class="lh-right">
-                  <div class="lh-right-top">Đa dạng sản phẩm</div>
-                  <div class="lh-right-bottom">
-                    Chúng tôi cam kết thực hiện lời hứa này trong mọi khía cạnh
-                    của hoạt đọng kinh doanh của mình Chúng tôi cam kết thực
-                    hiện lời hứa này trong mọi khía cạnh của hoạt đọng kinh
-                    doanh của mình Chúng tôi cam kết thực hiện lời hứa này trong
-                    mọi khía cạnh của hoạt đọng kinh doanh của mình
-                  </div>
-                </div>
-              </li>
-              <li class="lh-grid-container">
-                <div class="lh-left"></div>
-                <div class="lh-right">
-                  <div class="lh-right-top">
-                    Bền vững và tôn trọng môi trường
-                  </div>
-                  <div class="lh-right-bottom">
-                    Chúng tôi cam kết thực hiện lời hứa này trong mọi khía cạnh
-                    của hoạt đọng kinh doanh của mình Chúng tôi cam kết thực
-                    hiện lời hứa này trong mọi khía cạnh của hoạt đọng kinh
-                    doanh của mình Chúng tôi cam kết thực hiện lời hứa này trong
-                    mọi khía cạnh của hoạt đọng kinh doanh của mình
-                  </div>
-                </div>
-              </li>
-              <li class="lh-grid-container">
-                <div class="lh-left"></div>
-                <div class="lh-right">
-                  <div class="lh-right-top">Dịch vụ khách hàng tận tâm</div>
-                  <div class="lh-right-bottom">
-                    Chúng tôi cam kết thực hiện lời hứa này trong mọi khía cạnh
-                    của hoạt đọng kinh doanh của mình Chúng tôi cam kết thực
-                    hiện lời hứa này trong mọi khía cạnh của hoạt đọng kinh
-                    doanh của mình Chúng tôi cam kết thực hiện lời hứa này trong
-                    mọi khía cạnh của hoạt đọng kinh doanh của mình
-                  </div>
-                </div>
-              </li>
-            </ol>
-          </div>
-          <div class="lhimg_container">
-            <div class="lhimg_content">
-              <div class="pink positioned">
-                <img src="https://picsum.photos/200/300" alt="" />
-              </div>
-              <div class="blue positioned">
-                <img src="https://picsum.photos/200/300" alt="" />
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 left-section1">   
+          <img  src="img/web.jpg" alt="Hình ảnh" class="img-fluid" />    
+        </div>
+        <div class="col-md-4 left-section2">
+          <img  src="img/tablet (1).jpg" alt="Hình ảnh" class="img-fluid" />        
+        </div>
+        <div class="col-md-8 right-section">
+          <div class="row">
+            <div class="col-md-12 top-subsection">
+              <h1 class="top_title_gt">GIỚI THIỆU</h1>
+              <h3 class="bot_title_gt">Chào quý khách hàng thân yêu của Blue Pink,</h2>
+              <div class="content_gt">
+                Tôi là Phan Thị Phương Tiền, người sáng lập của Công ty TNHH
+                Blue Pink - nơi chúng tôi mang đến sự hòa quyện giữa vẻ đẹp tự
+                nhiên và khoa học trong lĩnh vực mỹ phẩm.</br> Tôi đã luôn tin rằng
+                mọi người đều có quyền tự tin về vẻ đẹp của mình. Và điều này đã
+                thúc đẩy chúng tôi trong việc nghiên cứu và phát triển các sản
+                phẩm mỹ phẩm chất lượng hàng đầu, với vẻ đẹp sắc thái từ Hàn
+                Quốc, để giúp bạn đạt được vẻ đẹp tự nhiên và tỏa sáng mỗi ngày.
+                Tại Blue Pink, chúng tôi cam kết mang đến cho bạn những trải
+                nghiệm tuyệt vời nhất. Chúng tôi không chỉ bán sản phẩm mỹ phẩm,
+                chúng tôi mang đến sự tự tin và niềm vui trong việc chăm sóc da
+                của bạn.</br> Sự hài lòng của bạn là động lực mạnh mẽ giúp chúng tôi
+                không ngừng phấn đấu và hoàn thiện. Cùng với đội ngũ chuyên gia
+                tài năng và tâm huyết, chúng tôi sẽ không ngừng đổi mới và tạo
+                ra những sản phẩm đáng tin cậy nhất cho bạn.</br> Hãy cùng Blue Pink
+                trải nghiệm vẻ đẹp và tỏa sáng cùng nhau. Chúng tôi rất hân hạnh
+                được đồng hành cùng các bạn trong hành trình sắp tới.
               </div>
             </div>
           </div>
-
-          <div style="clear: both"></div>
-          <div class="footer_content">
-            Chúng tôi cam kết thực hiện lời hứa này trong mọi khía cạnh của hoạt
-            đọng kinh doanh của mình
+          <div class="row justify-content-end">
+            <div class="col-md-6 bottom-subsection">
+              <img
+                src="img/Brand-07.jpg"
+                alt="Hình ảnh"
+                class="img-fluid"
+              />
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
