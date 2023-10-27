@@ -28,12 +28,16 @@
       .lh-right-top {
         height: 30%;
         border-bottom: 1px solid #bdacac; /* Màu và độ dày của đường kẻ */
-        font-size: 1.7rem;
+        font-size: 1.3rem;
         font-weight: bold;
+        color: #3c5b2d;
       }
 
       .lh-right-bottom {
         height: 80%;
+        font-size: 1rem;
+        color: #7a7a7a;
+        text-align: justify;
       }
 
       .lh-grid-container {
@@ -50,6 +54,7 @@
         justify-content: center;
         font-size: 5rem;
         font-weight: bold;
+        color: #3c5b2d;
       }
 
       .lh-left::before {
@@ -77,21 +82,24 @@
         top: 300px;
       }
 
-      .blue {
-        z-index: 2;
-        background: rgb(17, 138, 178);
-      }
       .blue,
       .green,
       .pink {
         height: 150px;
         width: 150px;
       }
+      .lhimg_content_img{
+        width: 300px;
+      }
+      .loihua_title{
+        color: #3c5b2d;
+      }
     </style>
   </head>
   <body>
     <div class="loiHuaContainer">
-      <h1>Lời hứa CKD</h1>
+      <h1 class="loihua_title"
+      >Lời hứa C-K-D</h1>
       <h3>
         Lời hứa CKD kinh doanh của chúng tôi là mang đến sự tin tương cho khách
         hàng về chất lượng sản phẩm và dịch vụ.
@@ -119,7 +127,13 @@
                   <div class="lh-right-top">
                     Sáng tạo và nghiên cứu liên tục
                   </div>
-                  <div class="lh-right-bottom"></div>
+                  <div class="lh-right-bottom">
+                    Chúng tôi cam kết thực hiện lời hứa này trong mọi khía cạnh
+                    của hoạt đọng kinh doanh của mình Chúng tôi cam kết thực
+                    hiện lời hứa này trong mọi khía cạnh của hoạt đọng kinh
+                    doanh của mình Chúng tôi cam kết thực hiện lời hứa này trong
+                    mọi khía cạnh của hoạt đọng kinh doanh của mình
+                  </div>
                 </div>
               </li>
               <li class="lh-grid-container">
@@ -150,28 +164,15 @@
                   </div>
                 </div>
               </li>
-              <li class="lh-grid-container">
-                <div class="lh-left"></div>
-                <div class="lh-right">
-                  <div class="lh-right-top">Dịch vụ khách hàng tận tâm</div>
-                  <div class="lh-right-bottom">
-                    Chúng tôi cam kết thực hiện lời hứa này trong mọi khía cạnh
-                    của hoạt đọng kinh doanh của mình Chúng tôi cam kết thực
-                    hiện lời hứa này trong mọi khía cạnh của hoạt đọng kinh
-                    doanh của mình Chúng tôi cam kết thực hiện lời hứa này trong
-                    mọi khía cạnh của hoạt đọng kinh doanh của mình
-                  </div>
-                </div>
-              </li>
             </ol>
           </div>
           <div class="lhimg_container">
             <div class="lhimg_content">
-              <div class="pink positioned">
-                <img src="https://picsum.photos/200/300" alt="" />
-              </div>
               <div class="blue positioned">
-                <img src="https://picsum.photos/200/300" alt="" />
+                  <img  
+                  class = "lhimg_content_img"
+                  src="img/1.jpg" alt="" />
+                 </div>
               </div>
             </div>
           </div>
