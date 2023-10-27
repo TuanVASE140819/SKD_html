@@ -222,7 +222,7 @@
 
 /*  màn hình điện thoại */
 
-@media (min-width: 100px) and (max-width: 767px) {
+@media screen and (min-width: 300px) and (max-width: 400px) {
     .footer main_fix {
         display: none;
     }
@@ -269,10 +269,13 @@
     }
     .loihua_content {
         font-size: 0.7rem;
-        width:250px;
+        width:350px;
     }
-
     .loiHuaContainer{
+        /* xóa định dạng */
+        padding: 0 0% !important;
+        display: block;
+        padding-left: 35px; 
         width: 300px;
     }
     .lh-right-top {
@@ -281,22 +284,298 @@
     }
     .lh-right-bottom {
         font-size: 0.6rem;
-        width: 250px;
+       /* toàn bộ màn hình */
+        width: 331px;
     }
     .blue .lhimg_content_img {
         display: none;
     }.
 
     .lh-right{
-        width:250px;
-       
+        width:300px;
+        margin-left: 10%
     }
     .lh-left::before{
-        padding-right: 40px;
+        /*định dạnh bên trái */
+        left: 0px;
+        margin-left: 20%;
+        font-size: 3.5rem;
+    }
+    .blue {
+        display: none;
     }
     /*------------------------------------------- */
 }
+@media screen and (min-width: 400px) and (max-width: 500px) {
+    .footer main_fix {
+        display: none;
+    }
+    .ttkhac{
+        display: none;
+    }
+    .ttkhac2{
+        grid-column-start :none;
+    }
+    .respo_phone{
+        width: 500px;
+    }
+    .right1{
+        font-size: 14px;
+        font-style: italic;
+    }
+    .ttkhac1 {
+        display: block;
+        grid-column-start: 1;
+    }
+    .tuvan1{
+        display: none;
+    }
+    .ttkhac2 {
+        grid-column-start: 1;
+    }
+    .menu_footer_child{
+        font-size: 14px;
+    }
+    .fix_phone{
+        width:300px;
+    }
+    .fix_font {
+        font-size: 13px;
+    }
+    /*------------------------ loi hua------------- */
+    .lhimg_content_img {
+        /* sang phải 5% */
+        margin-left: 20%;
+    }
+    .loihua_title {
+        font-size:1.5rem;
+        width: 250px;
+    }
+    .loihua_content {
+        font-size: 0.7rem;
+        width:410px;
+    }
+    .loiHuaContainer{
+        /* xóa định dạng */
+        padding: 0 0% !important;
+        display: block;
+        padding-left: 35px; 
+        width: 300px;
+    }
+    .lh-right-top {
+        font-size: 1rem;
+        width: 250px;
+    }
+    .lh-right-bottom {
+        font-size: 0.6rem;
+       /* toàn bộ màn hình */
+        width: 352px;
+    }
+    .blue .lhimg_content_img {
+        display: none;
+    }.
 
+    .lh-right{
+        width:300px;
+        margin-left: 10%
+    }
+    .lh-left::before{
+        /*định dạnh bên trái */
+        left: 0px;
+        margin-left: 20%;
+        font-size: 3.5rem;
+    }
+    .blue {
+        display: none;
+    }
+    /*------------------------------------------- */
+}
+/* màn hình có chiều rộng là 360px */
+@media screen and (min-width: 360px) and (max-width: 400px) {
+    .footer main_fix {
+        display: none;
+    }
+    .ttkhac{
+        display: none;
+    }
+    .ttkhac2{
+        grid-column-start :none;
+    }
+    .respo_phone{
+        width: 500px;
+    }
+    .right1{
+        font-size: 14px;
+        font-style: italic;
+    }
+    .ttkhac1 {
+        display: block;
+        grid-column-start: 1;
+    }
+    .tuvan1{
+        display: none;
+    }
+    .ttkhac2 {
+        grid-column-start: 1;
+    }
+    .menu_footer_child{
+        font-size: 14px;
+    }
+    .fix_phone{
+        width:300px;
+    }
+    .fix_font {
+        font-size: 13px;
+    }
+    /*------------------------ loi hua------------- */
+    .lhimg_content_img {
+        /* sang phải 5% */
+        margin-left: 20%;
+    }
+    .loihua_title {
+        font-size:1.5rem;
+        width: 250px;
+    }
+    .loihua_content {
+        font-size: 0.7rem;
+        width:350px;
+    }
+    .loiHuaContainer{
+        /* xóa định dạng */
+        padding: 0 0% !important;
+        display: block;
+        padding-left: 35px; 
+        width: 300px;
+    }
+    .lh-right-top {
+        font-size: 1rem;
+        width: 250px;
+    }
+    .lh-right-bottom {
+        font-size: 0.6rem;
+       /* toàn bộ màn hình */
+        width: 310px;
+    }
+    .blue .lhimg_content_img {
+        display: none;
+    }.
+
+    .lh-right{
+        width:300px;
+        margin-left: 10%
+    }
+    .lh-left::before{
+        /*định dạnh bên trái */
+        left: 0px;
+        margin-left: 20%;
+        font-size: 3.5rem;
+    }
+    .blue {
+        display: none;
+    }
+    /*------------------------------------------- */
+}
+@media screen and (min-width: 500px) and (max-width: 1024px) {
+ .loiHuaContainer {
+        /* cách trái phải 20% */
+        padding: 0 20%;
+        /* cách trên 20px */
+        padding-top: 5%;
+    }
+    .footer_content {
+        font-size: 20px;
+        font-weight: bold;
+        color: black;
+    }
+    .custom-list {
+        counter-reset: my-counter; /* Thiết lập biến đếm tùy chỉnh */
+        list-style: none; /* Loại bỏ chữ số đánh số mặc định của danh sách */
+    }
+    
+    .lh-right {
+        display: flex;
+        flex-direction: column;
+        margin: 10%;
+    }
+    
+    .lh-right-top {
+        height: 30%;
+        border-bottom: 1px solid #bdacac; /* Màu và độ dày của đường kẻ */
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #3c5b2d;
+    }
+    
+    .lh-right-bottom {
+        height: 80%;
+        font-size: 0.8rem;
+        color: #5e5b5b;
+        text-align: justify;
+    }
+    
+    .lh-grid-container {
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 100%;
+        height: auto;
+        padding-bottom: 2rem;
+    }
+    
+    .lh-left {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        font-size: 5rem;
+        font-weight: bold;
+        color: #3c5b2d;
+    }
+    
+    .lh-left::before {
+        content: counter(my-counter); /* Display the value of the "my-counter" counter */
+        counter-increment: my-counter; /* Increment the "my-counter" counter */
+    }
+    .lhimg_content {
+        /* float: right; width: 50% */
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        /* dưới 20px */
+        padding-top: 10%;
+    }
+    
+    .positioned {
+        position: absolute;
+    }
+    
+    .pink {
+        background: rgb(239, 71, 111);
+        left: 1240px;
+        top: 300px;
+    }
+    
+    .blue {
+        height: 300px;
+        width: 300px;
+    }
+    .loihua_title {
+        color: #3c5b2d;
+        font-size: 1.8rem;
+        /* cách dưới 10% */
+        padding-bottom: 2%;
+    }
+    .loihua_content {
+        font-size: 0.8rem;
+    }
+    .loihua_header {
+        padding-top: 2%;
+        padding-left: 2%;
+        padding-bottom: 2%;
+    }
+    .blue .lhimg_content_img {
+        padding-left: 20%;
+     }.
+    /*------------------------------------------- */
+}
 /* ---------------------------LOI HUA-------27/10/2023-------------------------------------------- */
  /*  LOI HUA*/
   .loiHuaContainer {
@@ -318,6 +597,7 @@
 .lh-right {
     display: flex;
     flex-direction: column;
+    margin: 10%;
 }
 
 .lh-right-top {
