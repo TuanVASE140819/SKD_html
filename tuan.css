@@ -1,0 +1,444 @@
+
+.zoom_hinh_tintuc{overflow:hidden}
+.zoom_hinh_tintuc img{transition:all 1s}
+.zoom_hinh_tintuc:hover img{transform:scale(1.2)}
+.item_tin .img_post_tintuc{
+	width:40%;
+	max-width:170px;
+	margin-right:15px;
+	float:left;
+}
+.news_left .day_post_tintuc{
+	margin-bottom:5px;
+	color:#7d7c7c;
+}
+
+.item_news .desc_post_tintuc{
+	padding:0 5%;
+	text-align:justify;
+}
+
+/* 25/10/2023 */
+.hotro {
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    grid-gap: 10px;
+    max-height: 15rem;
+    /*display: flex;
+    justify-content: space-between;
+    align-items: start;*/
+}
+
+.item_ht {
+    border: 1px solid #e5e5e5;
+    text-align: center;
+    padding: 20px;
+    width: auto; /*31*/
+    height: auto;
+}
+/* ------------------------------------------------- */
+/* 26/10/2023 */
+.footer4{
+	/*  lấy màu primary của bootstrap */
+	background-color: #3d5c16;
+	/* chữ màu trắng */
+ }
+
+ .footer2 ul li a {
+    display: block;
+    color: #fff;
+    padding: 7px 15px;
+}
+
+.mxh_f2 {
+	margin-top:50px;
+	text-align: center; 
+}
+.hover_footer {
+    color: |red;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+/* yêu cầu xuất khẩu */
+.ycxkt_title{
+	color:#3d5c16 !important;
+}
+.ycxkt_gmail{
+	color:#000;
+}
+.ycxkt_title {
+    color: blue; /* Đặt màu xanh cho tiêu đề */
+}
+
+.ycxk_noidung p {
+    /* Đặt màu cho nội dung (có thể là màu mặc định hoặc màu tùy chọn khác) */
+    color: black;
+}
+
+.copy-right {
+    /* chữ màu trắng */
+    color: #fff;
+}
+
+.footer-img {
+    width: 50%;
+    height: auto;
+}
+
+.footer-img-2{
+    width: 60%;
+    height: auto;
+}
+
+.left1{
+    text-align: right;
+    margin-right: 8px;
+}
+.logo-footer {
+    width:350px;
+}
+.time-footer {
+    color: #fff;
+    font-size: 14px;
+    margin-top: 30px;
+}
+.logo_footer2{
+    width: 100%;
+    height: auto;   
+}
+.menu_footer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    /* chữ */
+}
+
+.menu_footer h3,
+.menu_footer p {
+    margin: 2px;
+}
+.menu_footer_child {
+    font-size: 12px;
+}
+.tuvanfooter {
+    /* cách dưới 20px */
+    padding-bottom: 20px;
+    /* chiếm 12 bên ô dưới */
+}
+.ycxk_container{
+    padding:0 4%;
+}
+.right{
+    font-size: 10px;
+    font-style: italic;
+}
+.right1{
+    font-size: 12px;
+    font-style: italic;
+}
+.left{
+    text-align: right;
+    margin-right: 8px;
+    
+}
+.left1{
+    text-align: right;
+    margin-right: 8px;
+    
+}
+
+.fix_next{
+    padding-bottom: 5px;
+}
+.fix_menu_child{
+    padding-left: 100px;
+}
+
+.tuvan2 {
+    /* ẩn đi */
+    display: none;
+}
+.ttkhac1{
+    display: none;
+}
+
+.repo2 {
+     /* sang trái 20px */
+    margin-left: -60px;
+    margin-top: 8px;
+}
+
+.line_footer_top{
+    border-bottom: 1px solid #DDDDDD;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.fix_font {
+    font-size: 11px;
+}
+
+/* media */
+/*  màn hình ipad  */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .footer-img {
+        width: 50%;
+        height: auto;
+        margin-left: 20px;
+    }
+    .ttkhac2{
+        grid-column-start: 2;
+    }
+    .ttkhac1{
+        display: block;
+        grid-column-start: 1;
+    }
+    .right{
+        font-size: 10px;
+    }
+    .logo-footer {
+        width: 100%;
+    }
+    .logo_footer2{
+        width: 100%;
+        height: auto;   
+    }
+    .menu_footer_child {
+        font-size: 12px;
+    }
+    .tuvanfooter {
+        grid-column-start: 3;
+    }
+    .tuvan1{
+        /* ẩn đi */
+        display: none;
+    }
+    .tuvan2 {
+        /* hiện ra */
+        display: block;
+    }
+
+
+}
+
+/*  màn hình điện thoại */
+
+@media (min-width: 100px) and (max-width: 767px) {
+    .footer main_fix {
+        display: none;
+    }
+    .ttkhac{
+        display: none;
+    }
+    .ttkhac2{
+        grid-column-start :none;
+    }
+    .respo_phone{
+        width: 500px;
+    }
+    .right1{
+        font-size: 14px;
+        font-style: italic;
+    }
+    .ttkhac1 {
+        display: block;
+        grid-column-start: 1;
+    }
+    .tuvan1{
+        display: none;
+    }
+    .ttkhac2 {
+        grid-column-start: 1;
+    }
+    .menu_footer_child{
+        font-size: 14px;
+    }
+    .fix_phone{
+        width:300px;
+    }
+    .fix_font {
+        font-size: 13px;
+    }
+    /*------------------------ loi hua------------- */
+    .lhimg_content_img {
+        /* sang phải 5% */
+        margin-left: 20%;
+    }
+    .loihua_title {
+        font-size:1.5rem;
+        width: 250px;
+    }
+    .loihua_content {
+        font-size: 0.7rem;
+        width:250px;
+    }
+
+    .loiHuaContainer{
+        width: 300px;
+    }
+    .lh-right-top {
+        font-size: 1rem;
+        width: 250px;
+    }
+    .lh-right-bottom {
+        font-size: 0.6rem;
+        width: 250px;
+    }
+    .blue .lhimg_content_img {
+        display: none;
+    }.
+
+    .lh-right{
+        width:250px;
+       
+    }
+    .lh-left::before{
+        padding-right: 40px;
+    }
+    /*------------------------------------------- */
+}
+
+/* ---------------------------LOI HUA-------27/10/2023-------------------------------------------- */
+ /*  LOI HUA*/
+  .loiHuaContainer {
+    /* cách trái phải 20% */
+    padding: 0 20%;
+    /* cách trên 20px */
+    padding-top: 5%;
+}
+.footer_content {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+.custom-list {
+    counter-reset: my-counter; /* Thiết lập biến đếm tùy chỉnh */
+    list-style: none; /* Loại bỏ chữ số đánh số mặc định của danh sách */
+}
+
+.lh-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.lh-right-top {
+    height: 30%;
+    border-bottom: 1px solid #bdacac; /* Màu và độ dày của đường kẻ */
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #3c5b2d;
+}
+
+.lh-right-bottom {
+    height: 80%;
+    font-size: 0.8rem;
+    color: #5e5b5b;
+    text-align: justify;
+}
+
+.lh-grid-container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 100%;
+    height: auto;
+    padding-bottom: 2rem;
+}
+
+.lh-left {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 5rem;
+    font-weight: bold;
+    color: #3c5b2d;
+}
+
+.lh-left::before {
+    content: counter(my-counter); /* Display the value of the "my-counter" counter */
+    counter-increment: my-counter; /* Increment the "my-counter" counter */
+}
+.lhimg_content {
+    /* float: right; width: 50% */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    /* dưới 20px */
+    padding-top: 10%;
+}
+
+.positioned {
+    position: absolute;
+}
+
+.pink {
+    background: rgb(239, 71, 111);
+    left: 1240px;
+    top: 300px;
+}
+
+.blue {
+    height: 300px;
+    width: 300px;
+}
+.loihua_title {
+    color: #3c5b2d;
+    font-size: 1.8rem;
+    /* cách dưới 10% */
+    padding-bottom: 2%;
+}
+.loihua_content {
+    font-size: 0.8rem;
+}
+.loihua_header {
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-bottom: 2%;
+}
+/* -------------------------------27/10/2023------------------------ */
+/* ---------------------------Story-------27/10/2023--------------------------------------------  */
+
+.storyContainer{
+      /* cách trái phải 20% */
+      padding: 0 20%;
+      /* cách trên 20px */
+      padding-top: 5%;
+      display: flex;
+      flex-direction: column;
+      /* align-items: center;
+      justify-content: space-between; */
+}
+.story_paragraph_1 {
+    /* chiếm 60% */
+    max-width: 90%; /* Điều chỉnh chiều rộng tối đa của đoạn văn */
+    /* chữ được trãi đều */
+    text-align: justify;
+    font-size: 12px;
+}
+.story_photo_1 img {
+    max-width: 100%; /* Đảm bảo hình ảnh không vượt quá kích thước của container */
+    height: auto; /* Giữ tỷ lệ khung hình khi thay đổi kích thước */
+    
+}
+
+.story_title {
+    color: #3c5b2d;
+    font-size: 1.5rem;
+    /* cách dưới 10% */
+    padding-bottom: 2%;
+    /* in đậm */
+    font-weight: bold;
+}
+
+.storty_content {
+    font-size: 0.8rem;
+    /* dính lên đầu trang */
+   
+}
+.story_block{
+    margin-top: 0;
+}
+.paragraph_1,
+    .paragraph_2 {
+        width: 50%; /* Phân chia chiều rộng thành 2 phần bằng nhau */
+        float: left; /* Cố định các phần tử vào bên trái */
+        box-sizing: border-box; /* Bao gồm padding và border trong kích thước chiều rộng */
+    }
