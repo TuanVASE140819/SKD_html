@@ -13,10 +13,17 @@
     .top_title_gt{
       /* màu chữ #3D5C16 */
       color: #3D5C16;
+      /* bold */
+      font-weight: bold;
+      font-size: 3rem;
     }
     .content_gt{
       /* can deu noi dung */
       text-align: justify;
+    }
+    .cover_img{
+      width: 80%;
+      margin-top: 10%;
     }
      @media screen and (min-width: 500px) and (max-width: 1024px) {
       .left-section1 {
@@ -25,34 +32,23 @@
       .left-section2 {
       display: block;
     }
-    .top-subsection{
-      font-size: 10px;
-    }
-    .top_title_gt{
-      font-size: 24px;
-    }
-    .bot_title_gt{
-      font-size: 18px;
-    }
-    }
+  }
     /* responsive man hinh dien thoai */
     @media screen and (max-width: 500px) {
    .left-section2 {
     display: none;
   }
-  .top-subsection{
-      font-size: 7px;
-    }
-    .top_title_gt{
-      font-size: 14px;
-    }
-    .bot_title_gt{
-      font-size: 10px;
-    }
+
     .bottom-subsection{
       /* nam goc trai */
-      width: 30%;
+      height: 10%;
       text-align: left;
+    }
+    .cover_img{
+      width: 50%;
+      margin-top: 10%;
+      /* căn lê phải */
+      margin-left: 45%;
     }
 }
 
@@ -60,7 +56,7 @@
     <!-- tôi muốn responsive -->
   </head>
   <body>
-    <div class="container">
+    <div class="gt_container">
       <div class="row">
         <div class="col-md-4 left-section1">   
           <img  src="img/web.jpg" alt="Hình ảnh" class="img-fluid" />    
@@ -76,7 +72,7 @@
               <div class="content_gt">
                 Tôi là Phan Thị Phương Tiền, người sáng lập của Công ty TNHH
                 Blue Pink - nơi chúng tôi mang đến sự hòa quyện giữa vẻ đẹp tự
-                nhiên và khoa học trong lĩnh vực mỹ phẩm.</br> Tôi đã luôn tin rằng
+                nhiên và khoa học trong lĩnh vực mỹ phẩm.</br></br> Tôi đã luôn tin rằng
                 mọi người đều có quyền tự tin về vẻ đẹp của mình. Và điều này đã
                 thúc đẩy chúng tôi trong việc nghiên cứu và phát triển các sản
                 phẩm mỹ phẩm chất lượng hàng đầu, với vẻ đẹp sắc thái từ Hàn
@@ -84,10 +80,10 @@
                 Tại Blue Pink, chúng tôi cam kết mang đến cho bạn những trải
                 nghiệm tuyệt vời nhất. Chúng tôi không chỉ bán sản phẩm mỹ phẩm,
                 chúng tôi mang đến sự tự tin và niềm vui trong việc chăm sóc da
-                của bạn.</br> Sự hài lòng của bạn là động lực mạnh mẽ giúp chúng tôi
+                của bạn.</br></br> Sự hài lòng của bạn là động lực mạnh mẽ giúp chúng tôi
                 không ngừng phấn đấu và hoàn thiện. Cùng với đội ngũ chuyên gia
                 tài năng và tâm huyết, chúng tôi sẽ không ngừng đổi mới và tạo
-                ra những sản phẩm đáng tin cậy nhất cho bạn.</br> Hãy cùng Blue Pink
+                ra những sản phẩm đáng tin cậy nhất cho bạn.</br></br> Hãy cùng Blue Pink
                 trải nghiệm vẻ đẹp và tỏa sáng cùng nhau. Chúng tôi rất hân hạnh
                 được đồng hành cùng các bạn trong hành trình sắp tới.
               </div>
@@ -98,7 +94,7 @@
               <img
                 src="img/Brand-07.jpg"
                 alt="Hình ảnh"
-                class="img-fluid"
+                class="img-fluid cover_img"
               />
             </div>
           </div>
