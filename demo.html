@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+
+      .container {
+        position: relative;
+      }
+
+      .image-container {
+        position: relative;
+        display: inline-block;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      .gradient-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 128, 0, 0) 0%,
+          rgba(0, 128, 0, 0.3) 100%
+        );
+      }
+    </style>
+    <title>Ảnh với màu xanh lệch qua 30%</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image-container">
+        <img
+          src="https://ckdcosvietnam.com/upload/photo/063fa9e5565a7e5c3e443623531e5af4-2-1442.png"
+          alt="Ảnh của bạn"
+        />
+        <div class="green-overlay"></div>
+      </div>
+    </div>
+  </body>
+</html>
