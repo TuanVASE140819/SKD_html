@@ -43,15 +43,30 @@
       }
 
       /* CSS cho hình ảnh */
-.image-slide-right {
-  transform: translateX(100%); /* Ban đầu ẩn hình ảnh bên phải */
+    .image-slide-right {
+     transform: translateX(100%); /* Ban đầu ẩn hình ảnh bên phải */
+     transition: transform 1s ease-in-out;
+    }
+
+      /* Khi hình ảnh được kích hoạt, di chuyển về vị trí ban đầu */
+    .image-slide-right.active {
+      transform: translateX(0);
+    }
+    
+    /* CSS cho hình ảnh chạy từ bên trái */
+.image-slide-left {
+  transform: translateX(-100%); /* Ban đầu ẩn hình ảnh bên trái */
   transition: transform 1s ease-in-out;
 }
 
 /* Khi hình ảnh được kích hoạt, di chuyển về vị trí ban đầu */
-.image-slide-right.active {
+.image-slide-left.active {
   transform: translateX(0);
 }
+
+
+/* Other CSS remains unchanged */
+
 
       @media screen and (max-width: 500px) {
         .gtth_container{
@@ -69,6 +84,10 @@
         .gtth-p-5{
           /* padding ẩn đi */
           /* padding: 5%; */
+        }
+        .image-slide-right{
+          transform: none;
+          transition: none;
         }
        
 }
@@ -89,6 +108,11 @@
           /* padding ẩn đi */
           padding: 5%;
         }
+        .image-slide-right{
+          transform: none;
+          transition: none;
+        }
+
       }
     </style>
   </head>
@@ -124,7 +148,7 @@
           </div>
           <div class="w-100"></div>
           <div class="col p-3 img-block-3">
-            <img src="img/kem.jpg" alt="" width="100%" />
+            <img src="img/kem.jpg" alt="" width="100%" class="image-slide-left" />
           </div>
           <div class="col gtth-p-5">
               <p class="text-justify">
@@ -134,36 +158,9 @@
             </p>
           </div>
           <div class="col p-3 img-block-3-1">
-            <img src="img/web1.jpg" alt="" width="100%" />
+            <img src="img/web1.jpg" alt="" width="100%"  />
           </div>
           <div class="w-100"></div>
-          <!-- <div class="col-md-12 gtth-p-5 ccth-content-3">            
-            <div class="row">
-              <div class="col-md-8 ccth-right">
-                <p class="text-justify">
-                  Chúng tôi tự hào là một công ty hàng đầu trong ngành công nghiệp
-                  mỹ phẩm Hàn Quốc, chú trọng vào việc mang đến những sản phẩm chất
-                  lượng cao cho khách hàng. Với mục tiêu làm đẹp tự nhiên và bền
-                  vững, chúng tôi cam kết cung cấp những giải pháp làm đẹp tiên tiến
-                  và đáng tin cậy.</br></br>
-                  Sự đa dạng và phong cách của sản phẩm là điểm mạnh của chúng tôi.
-                  Từ chăm sóc da hàng ngày cho đến trang điểm cá nhân, chúng tôi cung
-                  cấp một loạt các sản phẩm đáp ứng mọi nhu cầu làm đẹp. Chất lượng của
-                  sản phẩm được đảm bảo thông qua quá trình kiểm định nghiêm ngặt và 
-                  tuân thủ các tiêu chuẩn chất lượng quốc tế.</br>
-                </br>
-                  Không chỉ chú trọng vào việc tạo ra những sản phẩm tốt nhất,
-                  chúng tôi cũng chú trọng đến việc thúc đẩy sự bình đẳng và 
-                  bền vững trong ngành công nghiệp mỹ phẩm. Chúng tôi cam kết 
-                  tôn trọng môi trường và thực hiện các hoạt động sản xuất bền
-                  vững để giảm thiểu tác động đến tự nhiên.
-                </p>
-              </div>
-              <div class="col-md-4 ccth-left">
-                <img src="img/nuoc.jpg" alt="" width="100%" />
-              </div>
-            </div>
-        </div> -->
         <div class="col gtth-p-5">            
             <p class="text-justify">
               Chúng tôi tự hào là một công ty hàng đầu trong ngành công nghiệp
@@ -198,21 +195,28 @@
       // Lấy phần tử hình ảnh
       const image = document.querySelector('.image-slide-right');
     
-      // Hàm kích hoạt hiệu ứng khi hình ảnh vào tầm nhìn
+      // Hàm kích hoạt hiệu ứng khi trang web được tải
       function activateAnimation() {
-        const rect = image.getBoundingClientRect();
-        if (rect.top >= 0 && rect.left >= 0) {
-          image.classList.add('active');
-          window.removeEventListener('scroll', activateAnimation);
-        }
+        image.classList.add('active');
       }
-    
-      // Bắt đầu theo dõi sự kiện cuộn
-      window.addEventListener('scroll', activateAnimation);
     
       // Kích hoạt hiệu ứng khi trang web được tải
       window.addEventListener('load', activateAnimation);
     </script>
+    
+    <script>
+      // Lấy phần tử hình ảnh chạy từ bên trái
+      const imageLeft = document.querySelector('.image-slide-left');
+    
+      // Hàm kích hoạt hiệu ứng khi trang web được tải
+      function activateLeftAnimation() {
+        imageLeft.classList.add('active');
+      }
+    
+      // Kích hoạt hiệu ứng khi trang web được tải
+      window.addEventListener('load', activateLeftAnimation);
+    </script>
+    
     
   </body>
 </html>

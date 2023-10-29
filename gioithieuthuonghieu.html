@@ -38,6 +38,28 @@
       .gtth-content{
          margin-top: 3%;
       }
+
+            /* CSS cho hình ảnh */
+    .image-slide-right {
+     transform: translateX(100%); /* Ban đầu ẩn hình ảnh bên phải */
+     transition: transform 1s ease-in-out;
+    }
+
+      /* Khi hình ảnh được kích hoạt, di chuyển về vị trí ban đầu */
+    .image-slide-right.active {
+      transform: translateX(0);
+    }
+    
+    /* CSS cho hình ảnh chạy từ bên trái */
+.image-slide-left {
+  transform: translateX(-100%); /* Ban đầu ẩn hình ảnh bên trái */
+  transition: transform 1s ease-in-out;
+}
+
+/* Khi hình ảnh được kích hoạt, di chuyển về vị trí ban đầu */
+.image-slide-left.active {
+  transform: translateX(0);
+}
       @media screen and (max-width: 500px) {
         .gtth_container{
           width: 100%;
@@ -54,6 +76,10 @@
         .gtth-p-5{
           /* padding ẩn đi */
           padding: 5%;
+        }
+        .image-slide-right{
+          transform: none;
+          transition: none;
         }
        
 }
@@ -74,6 +100,10 @@
           /* padding ẩn đi */
           padding: 5%;
         }
+        .image-slide-right{
+          transform: none;
+          transition: none;
+        }
       }
     </style>
   </head>
@@ -89,6 +119,7 @@
               src="https://ckdcosvietnam.com/upload/elfinder/LOGO/LOGO%20FINAL%20VER%20PASTELArtboard%201.png"
               width="20%"
               alt=""
+              
             />
             <!-- tạo một đường line phái dưới-->
             
@@ -116,12 +147,12 @@
             </p>
           </div>
           <div class="col p-3">
-            <img src="img/web2.jpg" alt="" width="100%" />
+            <img src="img/web2.jpg" alt="" width="100%"  class = "image-slide-right"/>
           </div>
           <!-- tạo một khối dày 20% -->
           <div class="w-100"></div>
           <div class="col p-3 img-block-3">
-            <img src="img/web1.jpg" alt="" width="100%" />
+            <img src="img/web1.jpg" alt="" width="100%" class = "image-slide-left" />
           </div>
           <div class="col gtth-p-5">
             <img
@@ -149,5 +180,30 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      // Lấy phần tử hình ảnh
+      const image = document.querySelector('.image-slide-right');
+    
+      // Hàm kích hoạt hiệu ứng khi trang web được tải
+      function activateAnimation() {
+        image.classList.add('active');
+      }
+    
+      // Kích hoạt hiệu ứng khi trang web được tải
+      window.addEventListener('load', activateAnimation);
+    </script>
+    
+    <script>
+      // Lấy phần tử hình ảnh chạy từ bên trái
+      const imageLeft = document.querySelector('.image-slide-left');
+    
+      // Hàm kích hoạt hiệu ứng khi trang web được tải
+      function activateLeftAnimation() {
+        imageLeft.classList.add('active');
+      }
+    
+      // Kích hoạt hiệu ứng khi trang web được tải
+      window.addEventListener('load', activateLeftAnimation);
+    </script>
   </body>
 </html>
