@@ -41,6 +41,18 @@
         background-color: #3c5b2d;
         color: white;
       }
+
+      /* CSS cho hình ảnh */
+.image-slide-right {
+  transform: translateX(100%); /* Ban đầu ẩn hình ảnh bên phải */
+  transition: transform 1s ease-in-out;
+}
+
+/* Khi hình ảnh được kích hoạt, di chuyển về vị trí ban đầu */
+.image-slide-right.active {
+  transform: translateX(0);
+}
+
       @media screen and (max-width: 500px) {
         .gtth_container{
           width: 100%;
@@ -108,7 +120,7 @@
             </p>
           </div>
           <div class="col p-3">
-            <img src="img/gai.jpg" alt="" width="100%" />
+            <img src="img/gai.jpg" alt="" width="100%" class="image-slide-right" />
           </div>
           <div class="w-100"></div>
           <div class="col p-3 img-block-3">
@@ -182,5 +194,25 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      // Lấy phần tử hình ảnh
+      const image = document.querySelector('.image-slide-right');
+    
+      // Hàm kích hoạt hiệu ứng khi hình ảnh vào tầm nhìn
+      function activateAnimation() {
+        const rect = image.getBoundingClientRect();
+        if (rect.top >= 0 && rect.left >= 0) {
+          image.classList.add('active');
+          window.removeEventListener('scroll', activateAnimation);
+        }
+      }
+    
+      // Bắt đầu theo dõi sự kiện cuộn
+      window.addEventListener('scroll', activateAnimation);
+    
+      // Kích hoạt hiệu ứng khi trang web được tải
+      window.addEventListener('load', activateAnimation);
+    </script>
+    
   </body>
 </html>
