@@ -7,64 +7,53 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
     <style>
-    .left-section2 {
-      display: none;
-    }
-    .top_title_gt{
-      /* màu chữ #3D5C16 */
-      color: #3D5C16;
-      /* bold */
-      font-weight: bold;
-      font-size: 3rem;
-    }
-    .content_gt{
-      /* can deu noi dung */
-      text-align: justify;
-    }
-    .cover_img{
-      width: 80%;
-      margin-top: 10%;
-    }
-     @media screen and (min-width: 500px) and (max-width: 1024px) {
-      .left-section1 {
+      .left-section2 {
         display: none;
       }
-      .left-section2 {
-      display: block;
-    }
-  }
-    /* responsive man hinh dien thoai */
-    @media screen and (max-width: 500px) {
-   .left-section2 {
-    display: none;
-  }
-
-    .bottom-subsection{
-      /* nam goc trai */
-      height: 10%;
-      text-align: left;
-    }
-    .cover_img{
-      width: 50%;
-      margin-top: 10%;
-      /* căn lê phải */
-      margin-left: 45%;
-    }
-}
-
+      .top_title_gt {
+        color: #3d5c16;
+        font-weight: bold;
+        font-size: 3rem;
+      }
+      .content_gt {
+        text-align: justify;
+      }
+      .cover_img {
+        width: 80%;
+        margin-top: 10%;
+      }
+      @media screen and (min-width: 500px) and (max-width: 1024px) {
+        .left-section1 {
+          display: none;
+        }
+        .left-section2 {
+          display: block;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        .left-section2 {
+          display: none;
+        }
+        .bottom-subsection {
+          height: 10%;
+          text-align: left;
+        }
+        .cover_img {
+          width: 50%;
+          margin-top: 10%;
+          margin-left: 45%;
+        }
+      }
     </style>
-    <!-- tôi muốn responsive -->
   </head>
   <body>
-  
-</div>
     <div class="gt_container">
       <div class="row">
-        <div class="col-md-4 left-section1">   
-          <img  src="img/web.jpg" alt="Hình ảnh" class="img-fluid" />    
+        <div class="col-md-4 left-section1">
+          <img src="img/web.jpg" alt="Hình ảnh" class="img-fluid" />
         </div>
         <div class="col-md-4 left-section2">
-          <img  src="img/tablet (1).jpg" alt="Hình ảnh" class="img-fluid" />        
+          <img src="img/tablet (1).jpg" alt="Hình ảnh" class="img-fluid" />
         </div>
         <div class="col-md-8 right-section">
           <div class="row">
@@ -93,45 +82,47 @@
           </div>
           <div class="row justify-content-end">
             <div class="col-md-6 bottom-subsection">
-              <img
-                src="img/Brand-07.jpg"
-                alt="Hình ảnh"
-                class="img-fluid cover_img"
-              />
+              <img src="img/Brand-07.jpg" alt="Hình ảnh" class="img-fluid cover_img" />
             </div>
           </div>
         </div>
       </div>
     </div>
-   <!-- Messenger Chat plugin Code -->
-   <div id="fb-root"></div>
 
-   <!-- Your Chat plugin code -->
-   <div id="fb-customer-chat" class="fb-customerchat">
-   </div>
+    <!-- Mã widget Messenger -->
+    <!-- Messenger Chat plugin Code -->
+    <div id="fb-root"></div>
 
-   <script>
-     var chatbox = document.getElementById('fb-customer-chat');
-     chatbox.setAttribute("page_id", "166111649912609");
-     chatbox.setAttribute("attribution", "biz_inbox");
-   </script>
+    <!-- Your Chat plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
 
-   <!-- Your SDK code -->
-   <script>
-     window.fbAsyncInit = function() {
-       FB.init({
-         xfbml            : true,
-         version          : 'v18.0'
-       });
-     };
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "166111649912609");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
 
-     (function(d, s, id) {
-       var js, fjs = d.getElementsByTagName(s)[0];
-       if (d.getElementById(id)) return;
-       js = d.createElement(s); js.id = id;
-       js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
-       fjs.parentNode.insertBefore(js, fjs);
-     }(document, 'script', 'facebook-jssdk'));
-   </script>
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v18.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
