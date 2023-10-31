@@ -7,6 +7,12 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
     <style>
+         #fb-customer-chat {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            /* Các thuộc tính khác như width, height, background-color, ... */
+        }
       .left-section2 {
         display: none;
       }
@@ -92,35 +98,36 @@
     <!-- Mã widget Messenger -->
     <!-- Messenger Chat plugin Code -->
  <!-- Messenger Plugin chat Code -->
- <!--  Chat plugin code -->
-<div id="fb-root"></div>
-<div id="fb-customer-chat" class="fb-customerchat"></div>
-<script>
-    var chatbox = document.getElementById("fb-customer-chat");
-    chatbox.setAttribute("page_id", "166111649912609");
-    chatbox.setAttribute("attribution", "biz_inbox");
-</script>
+ <div id="fb-root"></div>
 
-<!--  SDK code -->
-<script>
-    window.fbAsyncInit = function () {
-        FB.init({
-            xfbml: true,
-            version: "v18.0",
-        });
-    };
+ <!-- Your Plugin chat code -->
+ <div id="fb-customer-chat" class="fb-customerchat">
+ </div>
 
-    (function (d, s, id) {
-        var js,
-            fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    })(document, "script", "facebook-jssdk");
-</script>
-<!-- End Messenger Chat plugin Code -->
+ <script>
+   var chatbox = document.getElementById('fb-customer-chat');
+   chatbox.setAttribute("page_id", "348693359165956");
+   chatbox.setAttribute("attribution", "biz_inbox");
+ </script>
+
+ <!-- Your SDK code -->
+ <script>
+   window.fbAsyncInit = function() {
+     FB.init({
+       xfbml            : true,
+       version          : 'v18.0'
+     });
+   };
+
+   (function(d, s, id) {
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) return;
+     js = d.createElement(s); js.id = id;
+     js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+ </script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
